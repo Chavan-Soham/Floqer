@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import axios, { AxiosHeaders } from "axios";
+import axios from "axios";
 
 
 
@@ -10,7 +10,7 @@ export default function ChatOpenAI(){
     const HTTP = 'https://api.openai.com/v1/chat/completion';
     const handleSubmit = (e: any) => {
         e.preventDefault();
-        axios.post(`${HTTP}`, {prompt}, {headers: {'Access-Control-Allow-Credentials': true}}).then((res)=> setResponse(res.data)).catch(error=> console.log(error));
+        axios.post(`${HTTP}`, {prompt}).then((res)=> setResponse(res.data)).catch(error=> console.log(error));
     }
     const handlePrompt = (e: any) => {
         setPrompt(e.target.value);
