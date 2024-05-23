@@ -120,7 +120,7 @@ export default function MainTable(){
           <h2>Job Titles in {selectedYear}</h2>
           <Table
             dataSource={detailedData}
-            columns={detailedColumns}
+            columns={detailedColumns  }
             rowKey="JobTitle"
             pagination={false}
           />
